@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-05-05 15:11:52
- * @LastEditTime: 2021-05-13 17:50:39
+ * @LastEditTime: 2021-05-14 00:39:40
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \离散数学\离散数学.md
@@ -380,3 +380,77 @@
 ***
 
 ### 环和域
+
+定义：
+1. 设`<R,+,·>`是代数系统，+和·是二元运算。如果满足以下条件:
+   - (1)`<R,+>`构成交换群；
+   - (2)`<R,·>`构成半群；
+   - (3)·运算对+运算可分配；
+则称`<R,+,·>`是一个环。
+2. 设`<R,+,·>`是环，
+   - (1)若环中乘法·适合交换律，则称R是交换环；
+   - (2)若环中乘法·存在单位元，则称R是含幺环；
+   - (3)若$\forall$ a,b∈R，ab=0 $\Rightarrow$ a=0∨b=0，则称R是无零因子环；
+   - (4)若R既是交换环、含幺环、无零因子环，则称R是整环。
+3. 设`<R,+,·>`是环，`<D,+,·>`是其子环，如果对$\forall$ a∈R，$\forall$ d∈D,都有ad∈D,da∈D,则称`<D,+,·>`是R的理想子环，简称理想。
+4. 设`<F,+,·>`是环，且|F|>1。如果满足以下条件:
+   - (1)`<F,+>`是阿贝尔群；
+   - (2)`<F-{0},·>`是阿贝尔群；
+   - (3)·运算对+运算可分配；则称`<F,+,·>`是一个域。
+
+
+定理：
+1. 设`<R,+,·>`是环，则
+   - (1)$\forall$ a∈R，a0=0a=0
+   - (2)$\forall$ a,b∈R，(-a)b=a(-b)=-ab
+   - (3)$\forall$ a,b,c∈R，a(b-c)=ab-ac，(b-c)a=ba-ca
+   - (4)$\forall$ $a_1,a_2,...,a_n,b_1,b_2,...,b_m$ ∈R(n,m≥2)
+  ($\sum_{i=1}^n a_i$)($\sum_{j=1}^m b_j$) = $\sum_{i=1}^n\sum_{j=1}^m$$a_ib_j$
+2. 环`<R,+,·>`是无零因子环的充要条件是·满足消去律。
+3. 有限整环一定是域。
+
+![](assets/57.png)
+![](assets/58.png)
+![](assets/59.png)
+
+***
+
+## 格与布尔代数
+
+### 格的基本概念
+
+#### 格的定义
+
+定义：
+1. 设`<L,≤>`是偏序集，如果$\forall$ x,y∈L，{x,y}都有最小上界和最大下界，则称S关于偏序≤是一个格。
+   通常用a*b表示{a,b}的最大下界,用a $\oplus$ b表示{a,b}的最小上界。即:
+   a*b=glb{a,b}     保交运算
+   a $\oplus$ b=lub{a,b}    保联运算
+   注：任一个偏序集合的子集,如果存在最小上界(lub),则它是唯一的；如果存在最大下界(glb),则它也是唯一的。所以*和$\oplus$是格上的代数运算。
+   
+
+
+
+性质：
+1. 设`<L,≤>`是格,则运算*和 $\oplus$ 满足交换律、结合律、等幂律和吸收律,即：
+   - (1) $\forall$ a,b∈L有：a*b=b*a,a $\oplus$ b=b $\oplus$ a
+   - (2) $\forall$ a,b,c∈L有：(a*b)*c=a*(b*c),(a $\oplus$ b) $\oplus$ c=a $\oplus$ (b $\oplus$ c)
+   - (3) $\forall$ a∈L有：a*a=a,a $\oplus$ a=a
+   - (4) $\forall$ a,b∈L有：a*(a $\oplus$ b)=a,a $\oplus$ (a*b)=a
+2. 设L是格,则$\forall$ a,b∈L有:a≤b $\Leftrightarrow$ a*b=a $\Leftrightarrow$ a $\oplus$ b=b。
+3. 设`<L,≤>`是格,证明对a,b,c∈L有：
+   - (1)a $\oplus$ (b*c)≤(a $\oplus$ b)*(a $\oplus$ c);
+   - (2)a*(b $\oplus$ c)≥(a*b) $\oplus$ (a * c)
+
+
+![](assets/60.png)
+![](assets/61.png)
+![](assets/62.png)
+
+### 格是代数系统
+
+定义：
+1. 设`<L,*,`$\oplus$`>`是具有两个二元运算的代数系统,若*和$\oplus$运算满足交换律、结合律、等幂律、吸收律,则称代数系统`<L,*,`$\oplus$`>`是格。 
+
+定理：
+1. 
